@@ -6,7 +6,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
 
     // load MinnoJS from the CDN (you probably don't need to change this)
     var scriptTag = document.createElement('script');
-    scriptTag.src = 'https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/pi-minno.js';
+    scriptTag.src = 'https://github.com/zichettella/RSF/blob/main/modified_full_AMP';
     scriptTag.onload = onLoad;
     scriptTag.onreadystatechange = onLoad;
     container.appendChild(scriptTag);
@@ -21,7 +21,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
     // This function gets activated only after MinnoJS is loaded
     function onLoad() {
         // Run your study (just set the correct URL)
-        minnoJS(canvas, "https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/amp/qualtrics/race_amp.js");
+        minnoJS(canvas, "https://github.com/zichettella/RSF/blob/main/modified_full_AMP");
 
         // MinnoJS doesn't know about Qualtrics, we pass a function to inject the results into the question
         // For some reason `piGlobal` isn't available so we attach it to `minnoJS`
